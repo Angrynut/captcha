@@ -1,4 +1,4 @@
-package com.google.code.kaptcha.text.impl;
+package net.angrynut.captcha.text.impl;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -9,8 +9,8 @@ import java.awt.font.GlyphVector;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-import com.google.code.kaptcha.text.WordRenderer;
-import com.google.code.kaptcha.util.Configurable;
+import net.angrynut.captcha.text.WordRenderer;
+import net.angrynut.captcha.util.Configurable;
 
 /**
  * The default implementation of {@link WordRenderer}, creates an image with a

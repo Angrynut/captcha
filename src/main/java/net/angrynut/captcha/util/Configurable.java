@@ -1,5 +1,4 @@
-package com.google.code.kaptcha.util;
-
+package net.angrynut.captcha.util;
 
 /**
  * This interface determines if a class can be configured by properties handled

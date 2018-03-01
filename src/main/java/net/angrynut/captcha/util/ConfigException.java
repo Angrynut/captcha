@@ -1,4 +1,4 @@
-package com.google.code.kaptcha.util;
+package net.angrynut.captcha.util;
 
 /**
  * {@link ConfigException} is used to indicate an error in configuration

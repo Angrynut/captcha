@@ -1,4 +1,4 @@
-package com.google.code.kaptcha.util;
+package net.angrynut.captcha.util;
 
 import java.awt.Color;
 import java.awt.Font;

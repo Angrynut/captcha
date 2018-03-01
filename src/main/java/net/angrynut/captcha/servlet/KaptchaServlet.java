@@ -1,4 +1,4 @@
-package com.google.code.kaptcha.servlet;
+package net.angrynut.captcha.servlet;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.code.kaptcha.Producer;
-import com.google.code.kaptcha.util.Config;
+import net.angrynut.captcha.CaptchaProducer;
+import net.angrynut.captcha.util.Config;
 
 /**
  * This servlet uses the settings passed into it via the Producer api.
@@ -30,7 +30,7 @@ public class KaptchaServlet extends HttpServlet implements Servlet
 {
 	private Properties props = new Properties();
 
-	private Producer kaptchaProducer = null;
+	private CaptchaProducer kaptchaProducer = null;
 
 	private String sessionKeyValue = null;
 

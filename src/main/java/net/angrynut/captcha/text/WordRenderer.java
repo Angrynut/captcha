@@ -1,4 +1,4 @@
-package com.google.code.kaptcha.text;
+package net.angrynut.captcha.text;
 
 import java.awt.image.BufferedImage;
 

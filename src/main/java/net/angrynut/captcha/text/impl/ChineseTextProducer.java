@@ -1,8 +1,8 @@
-package com.google.code.kaptcha.text.impl;
+package net.angrynut.captcha.text.impl;
 
 import java.util.Random;
 
-import com.google.code.kaptcha.text.TextProducer;
+import net.angrynut.captcha.text.TextProducer;
 
 /**
  * TextProducer Implementation that will return Chinese characters..

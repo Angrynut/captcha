@@ -1,4 +1,4 @@
-package com.google.code.kaptcha.impl;
+package net.angrynut.captcha.impl;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -10,8 +10,8 @@ import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-import com.google.code.kaptcha.NoiseProducer;
-import com.google.code.kaptcha.util.Configurable;
+import net.angrynut.captcha.NoiseProducer;
+import net.angrynut.captcha.util.Configurable;
 
 /**
  * The default implementation of {@link NoiseProducer}, adds a noise on an

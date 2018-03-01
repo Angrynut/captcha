@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
-apply plugin: 'signing' //使用signing plugin做数字签名
+apply plugin: 'signing' // 使用signing plugin做数字签名
 
 group = 'com.github.penggle'
 version = '2.3.2'

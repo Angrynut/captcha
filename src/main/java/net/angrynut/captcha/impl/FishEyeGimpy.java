@@ -1,10 +1,10 @@
-package com.google.code.kaptcha.impl;
+package net.angrynut.captcha.impl;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
-import com.google.code.kaptcha.GimpyEngine;
+import net.angrynut.captcha.GimpyEngine;
 
 /**
  * {@link FishEyeGimpy} adds fish eye effect with vertical and horizontal lines.

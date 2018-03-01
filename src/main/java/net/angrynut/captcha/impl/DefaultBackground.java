@@ -1,4 +1,4 @@
-package com.google.code.kaptcha.impl;
+package net.angrynut.captcha.impl;
 
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -7,8 +7,8 @@ import java.awt.RenderingHints;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
 
-import com.google.code.kaptcha.BackgroundProducer;
-import com.google.code.kaptcha.util.Configurable;
+import net.angrynut.captcha.BackgroundProducer;
+import net.angrynut.captcha.util.Configurable;
 
 /**
  * Default implementation of {@link BackgroundProducer}, adds a gradient

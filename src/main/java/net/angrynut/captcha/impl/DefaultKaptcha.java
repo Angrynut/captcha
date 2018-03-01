@@ -1,4 +1,4 @@
-package com.google.code.kaptcha.impl;
+package net.angrynut.captcha.impl;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -6,19 +6,19 @@ import java.awt.Graphics2D;
 import java.awt.geom.Line2D;
 import java.awt.image.BufferedImage;
 
-import com.google.code.kaptcha.BackgroundProducer;
-import com.google.code.kaptcha.GimpyEngine;
-import com.google.code.kaptcha.Producer;
-import com.google.code.kaptcha.text.TextProducer;
-import com.google.code.kaptcha.text.WordRenderer;
-import com.google.code.kaptcha.util.Configurable;
+import net.angrynut.captcha.BackgroundProducer;
+import net.angrynut.captcha.CaptchaProducer;
+import net.angrynut.captcha.GimpyEngine;
+import net.angrynut.captcha.text.TextProducer;
+import net.angrynut.captcha.text.WordRenderer;
+import net.angrynut.captcha.util.Configurable;
 
 /**
- * Default {@link Producer} implementation which draws a captcha image using
+ * Default {@link CaptchaProducer} implementation which draws a captcha image using
  * {@link WordRenderer}, {@link GimpyEngine}, {@link BackgroundProducer}.
  * Text creation uses {@link TextProducer}.
  */
-public class DefaultKaptcha extends Configurable implements Producer
+public class DefaultKaptcha extends Configurable implements CaptchaProducer
 {
 	private int width = 200;
 

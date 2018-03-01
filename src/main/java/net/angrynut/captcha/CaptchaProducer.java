@@ -1,11 +1,11 @@
-package com.google.code.kaptcha;
+package net.angrynut.captcha;
 
 import java.awt.image.BufferedImage;
 
 /**
  * Responsible for creating captcha image with a text drawn on it.
  */
-public interface Producer
+public interface CaptchaProducer
 {
 	/**
 	 * Create an image which will have written a distorted text.

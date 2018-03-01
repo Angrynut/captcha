@@ -1,22 +1,22 @@
-package com.google.code.kaptcha.util;
+package net.angrynut.captcha.util;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.util.Properties;
 
-import com.google.code.kaptcha.BackgroundProducer;
-import com.google.code.kaptcha.Constants;
-import com.google.code.kaptcha.GimpyEngine;
-import com.google.code.kaptcha.NoiseProducer;
-import com.google.code.kaptcha.Producer;
-import com.google.code.kaptcha.impl.DefaultBackground;
-import com.google.code.kaptcha.impl.DefaultKaptcha;
-import com.google.code.kaptcha.impl.DefaultNoise;
-import com.google.code.kaptcha.impl.WaterRipple;
-import com.google.code.kaptcha.text.TextProducer;
-import com.google.code.kaptcha.text.WordRenderer;
-import com.google.code.kaptcha.text.impl.DefaultTextCreator;
-import com.google.code.kaptcha.text.impl.DefaultWordRenderer;
+import net.angrynut.captcha.BackgroundProducer;
+import net.angrynut.captcha.CaptchaProducer;
+import net.angrynut.captcha.Constants;
+import net.angrynut.captcha.GimpyEngine;
+import net.angrynut.captcha.NoiseProducer;
+import net.angrynut.captcha.impl.DefaultBackground;
+import net.angrynut.captcha.impl.DefaultKaptcha;
+import net.angrynut.captcha.impl.DefaultNoise;
+import net.angrynut.captcha.impl.WaterRipple;
+import net.angrynut.captcha.text.TextProducer;
+import net.angrynut.captcha.text.WordRenderer;
+import net.angrynut.captcha.text.impl.DefaultTextCreator;
+import net.angrynut.captcha.text.impl.DefaultWordRenderer;
 
 /**
  * {@link Config} retrieves configuration values from properties file and
@@ -62,11 +62,11 @@ public class Config
 	}
 
 	/** */
-	public Producer getProducerImpl()
+	public CaptchaProducer getProducerImpl()
 	{
 		String paramName = Constants.KAPTCHA_PRODUCER_IMPL;
 		String paramValue = this.properties.getProperty(paramName);
-		Producer producer = (Producer) this.helper.getClassInstance(paramName, paramValue, new DefaultKaptcha(), this);
+		CaptchaProducer producer = (CaptchaProducer) this.helper.getClassInstance(paramName, paramValue, new DefaultKaptcha(), this);
 		return producer;
 	}
 

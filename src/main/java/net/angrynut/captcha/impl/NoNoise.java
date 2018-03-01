@@ -1,9 +1,9 @@
-package com.google.code.kaptcha.impl;
+package net.angrynut.captcha.impl;
 
 import java.awt.image.BufferedImage;
 
-import com.google.code.kaptcha.NoiseProducer;
-import com.google.code.kaptcha.util.Configurable;
+import net.angrynut.captcha.NoiseProducer;
+import net.angrynut.captcha.util.Configurable;
 
 /**
  * Imlemention of NoiseProducer that does nothing.
