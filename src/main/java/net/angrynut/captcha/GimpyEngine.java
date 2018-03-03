@@ -5,8 +5,7 @@ import java.awt.image.BufferedImage;
 /**
  * {@link GimpyEngine} is responsible for applying image distortion.
  */
-public interface GimpyEngine
-{
+public interface GimpyEngine {
 	/**
 	 * @param baseImage
 	 *            the base image

@@ -46,7 +46,6 @@ public class Config
 	private String sessionKey = CAPTCHA_SESSION_KEY;
 	// TODO  干啥用的?
 	private String sessionDate = CAPTCHA_SESSION_DATE;
-	
 
 	private CaptchaProducer captchaProducer = new DefaultCaptchaProducer();
 	private TextProducer textProducer = new DefaultTextCreator();
@@ -54,5 +53,136 @@ public class Config
 	private GimpyEngine gimpyEngine = new WaterRipple();
 	private WordRenderer wordRenderer = new DefaultWordRenderer();
 	private BackgroundProducer backgroundProducer = new DefaultBackgroundProducer();
+	
+	public Config setBorderColor(Object borderColor) {
+		this.borderColor = ColorUtil.toColor(borderColor);
+		return this;
+	}
+	
+	public Config setTextProducerFontColor(Object textProducerFontColor) {
+		this.textProducerFontColor = ColorUtil.toColor(textProducerFontColor);
+		return this;
+	}
+	
+	public Config setNoiseColor(Object noiseColor) {
+		this.noiseColor = ColorUtil.toColor(noiseColor);
+		return this;
+	}
+	
+	public Config setBackgroundColorFrom(Object backgroundColorFrom) {
+		this.backgroundColorFrom = ColorUtil.toColor(backgroundColorFrom);
+		return this;
+	}
+	
+	public Config setBackgroundColorTo(Object backgroundColorTo) {
+		this.backgroundColorTo = ColorUtil.toColor(backgroundColorTo);
+		return this;
+	}
+	
+	public Config setBorderDrawn(boolean borderDrawn) {
+		this.borderDrawn = borderDrawn;
+		return this;
+	}
+	
+	public Config setBorderThickness(int borderThickness) {
+		if (borderThickness < 1)
+			throw new IllegalArgumentException("borderThickness should be a positive Integer.");
+		
+		this.borderThickness = borderThickness;
+		return this;
+	}
+	
+	public Config setTextProducerCharLength(int textProducerCharLength) {
+		if (textProducerCharLength < 1)
+			throw new IllegalArgumentException("textProducerCharLength should be a positive Integer.");
+		
+		this.textProducerCharLength = textProducerCharLength;
+		return this;
+	}
+	
+	public Config setTextProducerCharSpace(int textProducerCharSpace) {
+		if (textProducerCharSpace < 1)
+			throw new IllegalArgumentException("textProducerCharSpace should be a positive Integer.");
+		
+		this.textProducerCharSpace = textProducerCharSpace;
+		return this;
+	}
+	
+	public Config setTextProducerFontSize(int textProducerFontSize) {
+		if (textProducerFontSize < 1)
+			throw new IllegalArgumentException("textProducerFontSize should be a positive Integer.");
+		
+		this.textProducerFontSize = textProducerFontSize;
+		return this;
+	}
+	
+	public Config setTextProducerFonts(Object textProducerFonts) {
+		this.textProducerFonts = FontUtil.toFonts(textProducerFonts);
+		return this;
+	}
+	
+	public Config setWidth(int width) {
+		if (width < 1)
+			throw new IllegalArgumentException("width should be a positive Integer.");
+		
+		this.width = width;
+		return this;
+	}
+	
+	public Config setHeight(int height) {
+		if (height < 1)
+			throw new IllegalArgumentException("height should be a positive Integer.");
+		
+		this.height = height;
+		return this;
+	}
+	
+	public Config setTextProducerCharString(Object textProducerCharString) {
+		this.textProducerCharString = CharsUtil.toChars(textProducerCharString);
+		return this;
+	}
+	
+	public Config setSessionKey(String sessionKey) {
+		this.sessionKey = sessionKey;
+		return this;
+	}
+	
+	public Config setSessionDate(String sessionDate) {
+		this.sessionDate = sessionDate;
+		return this;
+	}
+	
+	public Config setCaptchaProducer(CaptchaProducer captchaProducer) {
+		this.captchaProducer = captchaProducer;
+		return this;
+	}
+	
+	public Config setTextProducer(TextProducer textProducer) {
+		this.textProducer = textProducer;
+		return this;
+	}
+	
+	public Config setNoiseProducer(NoiseProducer noiseProducer) {
+		this.noiseProducer = noiseProducer;
+		return this;
+	}
+	
+	public Config setGimpyEngine(GimpyEngine gimpyEngine) {
+		this.gimpyEngine = gimpyEngine;
+		return this;
+	}
+	
+	public Config setWordRenderer(WordRenderer wordRenderer) {
+		this.wordRenderer = wordRenderer;
+		return this;
+	}
+	
+	public Config setBackgroundProducer(BackgroundProducer backgroundProducer) {
+		this.backgroundProducer = backgroundProducer;
+		return this;
+	}
+	
+	
+	
 	
 }

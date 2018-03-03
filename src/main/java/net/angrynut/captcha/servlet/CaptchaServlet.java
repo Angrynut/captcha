@@ -30,7 +30,7 @@ public class CaptchaServlet extends HttpServlet implements Servlet
 {
 	private Properties props = new Properties();
 
-	private CaptchaProducer kaptchaProducer = null;
+	private CaptchaProducer captchaProducer = null;
 
 	private String sessionKeyValue = null;
 
@@ -58,7 +58,7 @@ public class CaptchaServlet extends HttpServlet implements Servlet
 		}
 
 		Config config = new Config();
-		this.kaptchaProducer = config.getCaptchaProducer();
+		this.captchaProducer = config.getCaptchaProducer();
 		this.sessionKeyValue = config.getSessionKey();
 		this.sessionKeyDateValue = config.getSessionDate();
 	}
@@ -81,18 +81,18 @@ public class CaptchaServlet extends HttpServlet implements Servlet
 		resp.setContentType("image/jpeg");
 
 		// create the text for the image
-		String capText = this.kaptchaProducer.createText();
+		String capText = this.captchaProducer.createText();
 
 		// store the text in the session
 		req.getSession().setAttribute(this.sessionKeyValue, capText);
 
 		// store the date in the session so that it can be compared
 		// against to make sure someone hasn't taken too long to enter
-		// their kaptcha
+		// their captcha
 		req.getSession().setAttribute(this.sessionKeyDateValue, new Date());
 
 		// create the image with the text
-		BufferedImage bi = this.kaptchaProducer.createImage(capText);
+		BufferedImage bi = this.captchaProducer.createImage(capText);
 
 		ServletOutputStream out = resp.getOutputStream();
 

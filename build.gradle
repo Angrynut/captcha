@@ -18,7 +18,7 @@ ext.versions = [
 
 jar {
     manifest {
-        attributes 'Implementation-Title': 'kaptcha', 'Implementation-Version': version
+        attributes 'Implementation-Title': 'captcha', 'Implementation-Version': version
     }
 }
 

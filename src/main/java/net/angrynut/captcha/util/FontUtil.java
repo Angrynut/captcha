@@ -2,7 +2,7 @@ package net.angrynut.captcha.util;
 
 import java.awt.Font;
 
-public class FontUtil {
+public final class FontUtil {
 	
 	public static final int DEFAULT_FONT_SIZE = 40;
 	
@@ -16,7 +16,7 @@ public class FontUtil {
 	 * stringToFonts("Arial,Courier");
 	 * </pre>
 	 */
-	public Font[] stringToFonts(String fontNamesStr) {
+	public static Font[] stringToFonts(String fontNamesStr) {
 		if ("".equals(fontNamesStr) || fontNamesStr == null) {
 			return DEFAULT_FONTS;
 		}
@@ -37,7 +37,7 @@ public class FontUtil {
 	 * toFonts("Arial,Courier");
 	 * </pre>
 	 */
-	public Font[] toFonts(Object fonts) {
+	public static Font[] toFonts(Object fonts) {
 		if (fonts instanceof Font[]) {
 			return (Font[])fonts;
 		}
