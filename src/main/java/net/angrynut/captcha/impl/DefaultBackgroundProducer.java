@@ -15,7 +15,7 @@ import net.angrynut.captcha.util.Configurable;
  * background to an image. The gradient color is diagonal and made of Color From
  * (top left) and Color To (bottom right).
  */
-public class DefaultBackground extends Configurable implements BackgroundProducer
+public class DefaultBackgroundProducer extends Configurable implements BackgroundProducer
 {
 	/**
 	 * @param baseImage the base image

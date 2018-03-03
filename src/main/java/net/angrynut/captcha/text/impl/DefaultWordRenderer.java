@@ -32,7 +32,7 @@ public class DefaultWordRenderer extends Configurable implements WordRenderer
 	public BufferedImage renderWord(String word, int width, int height)
 	{
 		int fontSize = getConfig().getTextProducerFontSize();
-		Font[] fonts = getConfig().getTextProducerFonts(fontSize);
+		Font[] fonts = getConfig().getTextProducerFonts();
 		Color color = getConfig().getTextProducerFontColor();
 		int charSpace = getConfig().getTextProducerCharSpace();
 		BufferedImage image = new BufferedImage(width, height,

@@ -17,7 +17,7 @@ import net.angrynut.captcha.util.Configurable;
  * The default implementation of {@link NoiseProducer}, adds a noise on an
  * image.
  */
-public class DefaultNoise extends Configurable implements NoiseProducer
+public class DefaultNoiseProducer extends Configurable implements NoiseProducer
 {
 	/**
 	 * Draws a noise on the image. The noise curve depends on the factor values.

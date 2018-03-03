@@ -5,8 +5,8 @@ apply plugin: 'signing' // 使用signing plugin做数字签名
 
 group = 'com.github.penggle'
 version = '2.3.2'
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 ext.versions = [
 	junit: '4.12',
@@ -27,14 +27,12 @@ repositories {
 }
 
 dependencies {
-    compile(
-    	"com.jhlabs:filters:${versions.jhlabs}",
-    	"javax.servlet:javax.servlet-api:${versions.servlet}"
-    )
+    compile("com.jhlabs:filters:2.0.235-1")
+    compile(	"javax.servlet:javax.servlet-api:3.1.0")
+    
+    compileOnly('org.projectlombok:lombok:1.16.18')
 	
-    testCompile(
-		"junit:junit:${versions.junit}"
-	)
+    testCompile("junit:junit:4.12")
 }
 
 //参见Part 2， 为项目生成**.jar/**-javadoc.jar/**-sources.jar  

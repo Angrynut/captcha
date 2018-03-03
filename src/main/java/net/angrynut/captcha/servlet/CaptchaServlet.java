@@ -26,7 +26,7 @@ import net.angrynut.captcha.util.Config;
  * @author cliffano
  */
 @SuppressWarnings("serial")
-public class KaptchaServlet extends HttpServlet implements Servlet
+public class CaptchaServlet extends HttpServlet implements Servlet
 {
 	private Properties props = new Properties();
 
@@ -57,8 +57,8 @@ public class KaptchaServlet extends HttpServlet implements Servlet
 			this.props.put(key, value);
 		}
 
-		Config config = new Config(this.props);
-		this.kaptchaProducer = config.getProducerImpl();
+		Config config = new Config();
+		this.kaptchaProducer = config.getCaptchaProducer();
 		this.sessionKeyValue = config.getSessionKey();
 		this.sessionKeyDateValue = config.getSessionDate();
 	}

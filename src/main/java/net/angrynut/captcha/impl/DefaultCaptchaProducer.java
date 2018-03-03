@@ -18,7 +18,7 @@ import net.angrynut.captcha.util.Configurable;
  * {@link WordRenderer}, {@link GimpyEngine}, {@link BackgroundProducer}.
  * Text creation uses {@link TextProducer}.
  */
-public class DefaultKaptcha extends Configurable implements CaptchaProducer
+public class DefaultCaptchaProducer extends Configurable implements CaptchaProducer
 {
 	private int width = 200;
 
@@ -33,9 +33,9 @@ public class DefaultKaptcha extends Configurable implements CaptchaProducer
 	 */
 	public BufferedImage createImage(String text)
 	{
-		WordRenderer wordRenderer = getConfig().getWordRendererImpl();
-		GimpyEngine gimpyEngine = getConfig().getObscurificatorImpl();
-		BackgroundProducer backgroundProducer = getConfig().getBackgroundImpl();
+		WordRenderer wordRenderer = getConfig().getWordRenderer();
+		GimpyEngine gimpyEngine = getConfig().getGimpyEngine();
+		BackgroundProducer backgroundProducer = getConfig().getBackgroundProducer();
 		boolean isBorderDrawn = getConfig().isBorderDrawn();
 		this.width = getConfig().getWidth();
 		this.height = getConfig().getHeight();
@@ -79,6 +79,6 @@ public class DefaultKaptcha extends Configurable implements CaptchaProducer
 	 */
 	public String createText()
 	{
-		return getConfig().getTextProducerImpl().getText();
+		return getConfig().getTextProducer().getText();
 	}
 }
