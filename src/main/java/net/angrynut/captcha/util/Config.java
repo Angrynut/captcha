@@ -6,7 +6,6 @@ import java.awt.Font;
 import lombok.Getter;
 import net.angrynut.captcha.BackgroundProducer;
 import net.angrynut.captcha.CaptchaProducer;
-import net.angrynut.captcha.Constants;
 import net.angrynut.captcha.GimpyEngine;
 import net.angrynut.captcha.NoiseProducer;
 import net.angrynut.captcha.impl.DefaultBackgroundProducer;
@@ -26,6 +25,10 @@ import net.angrynut.captcha.text.impl.DefaultWordRenderer;
 public class Config
 {
 	
+	public final static String CAPTCHA_SESSION_KEY = "CAPTCHA_SESSION_KEY";
+
+	public final static String CAPTCHA_SESSION_DATE = "CAPTCHA_SESSION_DATE";
+	
 	private Color borderColor = Color.BLACK;
 	private Color textProducerFontColor = Color.BLACK;
 	private Color noiseColor = Color.BLACK;
@@ -40,9 +43,9 @@ public class Config
 	private int width = 200; // positive
 	private int height = 50; // positive
 	private char[] textProducerCharString = "abcde2345678gfynmnpwx".toCharArray();
-	private String sessionKey = Constants.KAPTCHA_SESSION_KEY;
+	private String sessionKey = CAPTCHA_SESSION_KEY;
 	// TODO  干啥用的?
-	private String sessionDate = Constants.KAPTCHA_SESSION_DATE;
+	private String sessionDate = CAPTCHA_SESSION_DATE;
 	
 
 	private CaptchaProducer captchaProducer = new DefaultCaptchaProducer();
