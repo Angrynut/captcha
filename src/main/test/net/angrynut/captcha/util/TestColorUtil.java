@@ -23,6 +23,9 @@ public class TestColorUtil {
 	
 	@Test
 	public void test_stringToRGBColor() {
+		
+		assertNull(stringToRGBColor(null));
+		
 		Color red = stringToRGBColor("#FF0000");
 		assertEquals(red, Color.red);
 		
@@ -35,6 +38,9 @@ public class TestColorUtil {
 	
 	@Test
 	public void test_toColor() {
+		
+		assertNull(toColor(null));
+		
 		Color red = toColor(0xFF0000);
 		assertEquals(red, Color.red);
 		

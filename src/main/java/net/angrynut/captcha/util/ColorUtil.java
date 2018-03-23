@@ -4,6 +4,9 @@ import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * A utility class to help to create {@link Color}} object.
+ */
 public final class ColorUtil {
 	
 	/**
@@ -32,6 +35,9 @@ public final class ColorUtil {
 	 * </pre>
 	 */
 	public static Color stringToRGBColor(String rgb) {
+		if (rgb == null)
+			return null;
+		
 		String colorValue = COLOR_MAP.get(rgb.toLowerCase());
 		if (colorValue != null) {
 			return intToRGBColor(Integer.parseInt(colorValue.substring(1), 16));
@@ -53,6 +59,9 @@ public final class ColorUtil {
 	 * </pre>
 	 */
 	public static Color toColor(Object obj) {
+		if (obj == null)
+			return null;
+		
 		if (obj instanceof String) {
 			return stringToRGBColor((String) obj);
 		}

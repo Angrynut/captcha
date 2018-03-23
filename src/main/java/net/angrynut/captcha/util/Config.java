@@ -22,8 +22,7 @@ import net.angrynut.captcha.text.impl.DefaultWordRenderer;
  * specifies default values when no value is specified.
  */
 @Getter
-public class Config
-{
+public class Config {
 	
 	public final static String CAPTCHA_SESSION_KEY = "CAPTCHA_SESSION_KEY";
 
@@ -44,7 +43,6 @@ public class Config
 	private int height = 50; // positive
 	private char[] textProducerCharString = "abcde2345678gfynmnpwx".toCharArray();
 	private String sessionKey = CAPTCHA_SESSION_KEY;
-	// TODO  干啥用的?
 	private String sessionDate = CAPTCHA_SESSION_DATE;
 
 	private CaptchaProducer captchaProducer = new DefaultCaptchaProducer();
@@ -181,8 +179,5 @@ public class Config
 		this.backgroundProducer = backgroundProducer;
 		return this;
 	}
-	
-	
-	
 	
 }

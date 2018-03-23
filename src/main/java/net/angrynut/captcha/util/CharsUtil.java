@@ -1,8 +1,19 @@
 package net.angrynut.captcha.util;
 
+
+/**
+ * A utility class to help to create {@code char} array.
+ */
 public final class CharsUtil {
-	
+
+	/**
+	 * @param obj which type is {@code char[]} or {@link CharSequence}
+	 * @return {@code char[]}
+	 */
 	public static char[] toChars(Object obj) {
+		if (obj == null)
+			return null;
+		
 		if (obj instanceof char[]) 
 			return (char[]) obj;
 		

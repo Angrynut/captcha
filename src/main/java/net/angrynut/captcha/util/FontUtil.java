@@ -2,6 +2,9 @@ package net.angrynut.captcha.util;
 
 import java.awt.Font;
 
+/**
+ * A utility class to help to create {@code Font} array.
+ */
 public final class FontUtil {
 	
 	public static final int DEFAULT_FONT_SIZE = 40;
@@ -10,13 +13,16 @@ public final class FontUtil {
 			new Font("Arial", Font.BOLD, DEFAULT_FONT_SIZE), 
 			new Font("Courier", Font.BOLD, DEFAULT_FONT_SIZE)
 	};
-	
+
 	/**
 	 * <pre>
 	 * stringToFonts("Arial,Courier");
 	 * </pre>
 	 */
 	public static Font[] stringToFonts(String fontNamesStr) {
+		if (fontNamesStr == null)
+			return null;
+		
 		if ("".equals(fontNamesStr) || fontNamesStr == null) {
 			return DEFAULT_FONTS;
 		}
@@ -38,6 +44,9 @@ public final class FontUtil {
 	 * </pre>
 	 */
 	public static Font[] toFonts(Object fonts) {
+		if (fonts == null)
+			return null;
+		
 		if (fonts instanceof Font[]) {
 			return (Font[])fonts;
 		}
