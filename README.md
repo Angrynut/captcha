@@ -1,15 +1,8 @@
-# kaptcha - A kaptcha generation engine.
+# Captcha: 一个图形验证码生成器
 
-This repo is the copy of http://code.google.com/p/kaptcha/ and published to maven central
-```
-<dependency>
-  <groupId>com.github.penggle</groupId>
-  <artifactId>kaptcha</artifactId>
-  <version>2.3.2</version>
-</dependency>
-```
-Please see the website for more information about this project.
+我最初想找一个好用的 Java Captcha 库，但是都感觉不好用（可能是我太懒了...）。
+最后选择了 [***penggle/kaptcha***](https://github.com/penggle/kaptcha)。
 
-http://code.google.com/p/kaptcha/
+在使用过程中，在配置这个库的相关属性时，感觉不太对劲。所以干脆 fork 下来自己改着玩吧。
 
-thanks!
+英语本来就不太好，读还是可以的，但是写的话真的很为难，所以我遇到的注释都改成中文吧。
