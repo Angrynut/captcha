@@ -1,4 +1,4 @@
-package net.angrynut.captcha.impl;
+package net.angrynut.captcha.comps.gimpy;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -7,15 +7,16 @@ import com.jhlabs.image.RippleFilter;
 import com.jhlabs.image.TransformFilter;
 import com.jhlabs.image.WaterFilter;
 
-import net.angrynut.captcha.GimpyEngine;
-import net.angrynut.captcha.NoiseProducer;
-import net.angrynut.captcha.util.Configurable;
+import net.angrynut.captcha.comps.noise.DefaultNoiseProducer;
+import net.angrynut.captcha.comps.noise.INoiseProducer;
 
 /**
- * {@link WaterRipple} adds water ripple effect to an image.
+ * {@link WaterRippleGimpy} adds water ripple effect to an image.
  */
-public class WaterRipple extends Configurable implements GimpyEngine
+public class WaterRippleGimpy implements IGimpyEngine
 {
+	private INoiseProducer noiseProducer = new DefaultNoiseProducer();
+	
 	/**
 	 * Applies distortion by adding water ripple effect.
 	 *
@@ -24,7 +25,6 @@ public class WaterRipple extends Configurable implements GimpyEngine
 	 */
 	public BufferedImage getDistortedImage(BufferedImage baseImage)
 	{
-		NoiseProducer noiseProducer = getConfig().getNoiseProducer();
 		BufferedImage distortedImage = new BufferedImage(baseImage.getWidth(),
 				baseImage.getHeight(), BufferedImage.TYPE_INT_ARGB);
 

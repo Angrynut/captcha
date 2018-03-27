@@ -1,11 +1,11 @@
-package net.angrynut.captcha;
+package net.angrynut.captcha.comps.noise;
 
 import java.awt.image.BufferedImage;
 
 /**
- * {@link NoiseProducer} is responsible for adding noise to an image.
+ * {@link INoiseProducer} is responsible for adding noise to an image.
  */
-public interface NoiseProducer
+public interface INoiseProducer
 {
 	/**
 	 * Adds noise to an image. It uses four factor values to determine the noise

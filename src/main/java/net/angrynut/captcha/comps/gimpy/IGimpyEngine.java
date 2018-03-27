@@ -1,11 +1,11 @@
-package net.angrynut.captcha;
+package net.angrynut.captcha.comps.gimpy;
 
 import java.awt.image.BufferedImage;
 
 /**
- * {@link GimpyEngine} is responsible for applying image distortion.
+ * {@link IGimpyEngine} is responsible for applying image distortion.
  */
-public interface GimpyEngine {
+public interface IGimpyEngine {
 	/**
 	 * @param baseImage
 	 *            the base image

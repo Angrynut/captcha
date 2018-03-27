@@ -15,8 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import net.angrynut.captcha.CaptchaProducer;
-import net.angrynut.captcha.util.Config;
+import net.angrynut.captcha.ICaptchaProducer;
 
 /**
  * This servlet uses the settings passed into it via the Producer api.
@@ -30,7 +29,7 @@ public class CaptchaServlet extends HttpServlet implements Servlet
 {
 	private Properties props = new Properties();
 
-	private CaptchaProducer captchaProducer = null;
+	private ICaptchaProducer captchaProducer = null;
 
 	private String sessionKeyValue = null;
 
@@ -57,10 +56,10 @@ public class CaptchaServlet extends HttpServlet implements Servlet
 			this.props.put(key, value);
 		}
 
-		Config config = new Config();
-		this.captchaProducer = config.getCaptchaProducer();
-		this.sessionKeyValue = config.getSessionKey();
-		this.sessionKeyDateValue = config.getSessionDate();
+//		Config config = new Config();
+//		this.captchaProducer = config.getCaptchaProducer();
+//		this.sessionKeyValue = config.getSessionKey();
+//		this.sessionKeyDateValue = config.getSessionDate();
 	}
 
 	/** */
