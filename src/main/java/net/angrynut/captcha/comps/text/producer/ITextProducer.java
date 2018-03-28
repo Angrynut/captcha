@@ -1,4 +1,4 @@
-package net.angrynut.captcha.comps.text;
+package net.angrynut.captcha.comps.text.producer;
 
 /**
  * 本接口负责生成字符文本。

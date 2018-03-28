@@ -4,8 +4,7 @@ import java.awt.image.BufferedImage;
 
 import net.angrynut.captcha.comps.background.IBackgroundProducer;
 import net.angrynut.captcha.comps.gimpy.IGimpyEngine;
-import net.angrynut.captcha.comps.text.ITextProducer;
-import net.angrynut.captcha.comps.text.IWordRenderer;
+import net.angrynut.captcha.comps.text.renderer.ITextRenderer;
 
 /**
  * Responsible for creating captcha image with a text drawn on it.
@@ -20,16 +19,9 @@ public interface ICaptchaProducer {
 	 */
 	BufferedImage createImage(String text);
 
-	/**
-	 * @return the text to be drawn
-	 */
-	String createText();
-
 	void setBackgroundProducer(IBackgroundProducer producer);
-
-	void setTextProducer(ITextProducer producer);
 
 	void setGimpyEngine(IGimpyEngine engine);
 
-	void setWordRenderer(IWordRenderer renderer);
+	void setTextRenderer(ITextRenderer renderer);
 }

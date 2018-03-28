@@ -1,4 +1,4 @@
-package net.angrynut.captcha.comps.text;
+package net.angrynut.captcha.comps.text.renderer;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -12,27 +12,16 @@ import java.util.Random;
 import net.angrynut.captcha.util.FontUtil;
 
 /**
- * The default implementation of {@link IWordRenderer}, creates an image with a
+ * The default implementation of {@link ITextRenderer}, creates an image with a
  * word rendered on it.
  */
-public class DefaultWordRenderer implements IWordRenderer {
+public class DefaultTextRenderer implements ITextRenderer {
 
 	private int fontSize = FontUtil.DEFAULT_FONT_SIZE;
 	private Font[] fonts = FontUtil.DEFAULT_FONTS;
 	private Color color = Color.BLACK;
 	private int charSpace = 2;
 
-	/**
-	 * Renders a word to an image.
-	 * 
-	 * @param word
-	 *            The word to be rendered.
-	 * @param width
-	 *            The width of the image to be created.
-	 * @param height
-	 *            The height of the image to be created.
-	 * @return The BufferedImage created from the word.
-	 */
 	public BufferedImage renderWord(String word, int width, int height) {
 		BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 		Graphics2D g2D = image.createGraphics();

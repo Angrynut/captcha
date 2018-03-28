@@ -11,14 +11,13 @@ import net.angrynut.captcha.comps.background.DefaultBackgroundProducer;
 import net.angrynut.captcha.comps.background.IBackgroundProducer;
 import net.angrynut.captcha.comps.gimpy.IGimpyEngine;
 import net.angrynut.captcha.comps.gimpy.WaterRippleGimpy;
-import net.angrynut.captcha.comps.text.DefaultTextProducer;
-import net.angrynut.captcha.comps.text.DefaultWordRenderer;
-import net.angrynut.captcha.comps.text.ITextProducer;
-import net.angrynut.captcha.comps.text.IWordRenderer;
+import net.angrynut.captcha.comps.text.producer.ITextProducer;
+import net.angrynut.captcha.comps.text.renderer.DefaultTextRenderer;
+import net.angrynut.captcha.comps.text.renderer.ITextRenderer;
 
 /**
  * Default {@link ICaptchaProducer} implementation which draws a captcha image
- * using {@link IWordRenderer}, {@link IGimpyEngine},
+ * using {@link ITextRenderer}, {@link IGimpyEngine},
  * {@link IBackgroundProducer}. Text creation uses {@link ITextProducer}.
  */
 public class DefaultCaptchaProducer implements ICaptchaProducer {
@@ -32,13 +31,10 @@ public class DefaultCaptchaProducer implements ICaptchaProducer {
 	private int borderThickness = 1; // positive
 
 	@Setter
-	private IWordRenderer wordRenderer = new DefaultWordRenderer();
+	private ITextRenderer textRenderer = new DefaultTextRenderer();
 	
 	@Setter
 	private IGimpyEngine gimpyEngine = new WaterRippleGimpy();
-	
-	@Setter
-	private ITextProducer textProducer = new DefaultTextProducer();
 	
 	@Setter
 	private IBackgroundProducer backgroundProducer = new DefaultBackgroundProducer();
@@ -51,7 +47,7 @@ public class DefaultCaptchaProducer implements ICaptchaProducer {
 	 * @return image with the text
 	 */
 	public BufferedImage createImage(String text) {
-		BufferedImage bi = wordRenderer.renderWord(text, width, height);
+		BufferedImage bi = textRenderer.renderWord(text, width, height);
 		bi = gimpyEngine.getDistortedImage(bi);
 		bi = backgroundProducer.addBackground(bi);
 		Graphics2D graphics = bi.createGraphics();
@@ -79,10 +75,4 @@ public class DefaultCaptchaProducer implements ICaptchaProducer {
 		graphics.draw(line2);
 	}
 
-	/**
-	 * @return the text to be drawn
-	 */
-	public String createText() {
-		return textProducer.getText();
-	}
 }
