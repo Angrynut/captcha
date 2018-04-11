@@ -7,6 +7,7 @@ import com.jhlabs.image.RippleFilter;
 import com.jhlabs.image.TransformFilter;
 import com.jhlabs.image.WaterFilter;
 
+import lombok.Setter;
 import net.angrynut.captcha.comps.noise.DefaultNoiseProducer;
 import net.angrynut.captcha.comps.noise.INoiseProducer;
 
@@ -15,6 +16,7 @@ import net.angrynut.captcha.comps.noise.INoiseProducer;
  */
 public class WaterRippleGimpy implements IGimpyEngine
 {
+	@Setter
 	private INoiseProducer noiseProducer = new DefaultNoiseProducer();
 	
 	/**

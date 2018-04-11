@@ -8,6 +8,7 @@ import com.jhlabs.image.RippleFilter;
 import com.jhlabs.image.ShadowFilter;
 import com.jhlabs.image.TransformFilter;
 
+import lombok.Setter;
 import net.angrynut.captcha.comps.noise.DefaultNoiseProducer;
 import net.angrynut.captcha.comps.noise.INoiseProducer;
 
@@ -16,6 +17,7 @@ import net.angrynut.captcha.comps.noise.INoiseProducer;
  */
 public class ShadowGimpy implements IGimpyEngine
 {
+	@Setter
 	private INoiseProducer noiseProducer = new DefaultNoiseProducer();
 	
 	/**

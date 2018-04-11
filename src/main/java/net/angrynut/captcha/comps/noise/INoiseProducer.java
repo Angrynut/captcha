@@ -3,21 +3,11 @@ package net.angrynut.captcha.comps.noise;
 import java.awt.image.BufferedImage;
 
 /**
- * {@link INoiseProducer} is responsible for adding noise to an image.
+ * 本接口用于为图片添加噪声。
  */
-public interface INoiseProducer
-{
+public interface INoiseProducer {
 	/**
-	 * Adds noise to an image. It uses four factor values to determine the noise
-	 * curve.
-	 * 
-	 * @param image
-	 *            the image to add the noise to
-	 * @param factorOne
-	 * @param factorTwo
-	 * @param factorThree
-	 * @param factorFour
+	 * 往图片中添加噪声。使用四个参数来决定噪声曲线。
 	 */
-	public void makeNoise(BufferedImage image, float factorOne,
-			float factorTwo, float factorThree, float factorFour);
+	public void makeNoise(BufferedImage image, float factorOne, float factorTwo, float factorThree, float factorFour);
 }
